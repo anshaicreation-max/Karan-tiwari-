@@ -1,0 +1,99 @@
+# Karan-tiwari-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Leakage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            background: #020617;
+            padding: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            margin: 0;
+            color: #38bdf8;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        video {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 600px;
+            border: 2px solid #38bdf8;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 15px;
+            background: #020617;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <!-- Logo image (tum change kar sakte ho) -->
+        <img src="https://via.placeholder.com/100" alt="Team Leakage Logo">
+        <h1>Team Leakage</h1>
+    </div>
+</header>
+
+<div class="container">
+    <h2>Upload Your Video</h2>
+
+    <input type="file" accept="video/*" onchange="loadVideo(event)">
+
+    <br>
+
+    <video id="videoPlayer" controls></video>
+</div>
+
+<footer>
+    © 2026 Team Leakage | All Rights Reserved
+</footer>
+
+<script>
+    function loadVideo(event) {
+        const video = document.getElementById('videoPlayer');
+        video.src = URL.createObjectURL(event.target.files[0]);
+        video.load();
+        video.play();
+    }
+</script>
+
+</body>
+</html>
+
